@@ -70,30 +70,38 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = <100>;
         };
-        
-        // Knob encoder rgb brightness change
-        scroll_encoder_rgb_brightness: scroll_encoder_rgb_brightness {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
-            tap-ms = <10>;
-        };
 
-        // Knob encoder rgb hue change
-        scroll_encoder_rgb_hue: scroll_encoder_rgb_hue {
+        // Knob encoder volume control
+        encoder_volume: encoder_volume {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
+            bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             tap-ms = <10>;
         };
         
-        // Mod morph behavior for rbg brightness/hue change with LSHIFT
-        scroll_encoder_rgb: scroll_encoder_rgb {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&scroll_encoder_rgb_brightness>, <&scroll_encoder_rgb_hue>;
-            mods = <MOD_LSFT>;
-        };
+        // // Knob encoder rgb brightness change
+        // scroll_encoder_rgb_brightness: scroll_encoder_rgb_brightness {
+        //     compatible = "zmk,behavior-sensor-rotate";
+        //     #sensor-binding-cells = <0>;
+        //     bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+        //     tap-ms = <10>;
+        // };
+
+        // // Knob encoder rgb hue change
+        // scroll_encoder_rgb_hue: scroll_encoder_rgb_hue {
+        //     compatible = "zmk,behavior-sensor-rotate";
+        //     #sensor-binding-cells = <0>;
+        //     bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
+        //     tap-ms = <10>;
+        // };
+        
+        // // Mod morph behavior for rbg brightness/hue change with LSHIFT
+        // scroll_encoder_rgb: scroll_encoder_rgb {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&encoder_rgb_brightness>, <&encoder_rgb_hue>;
+        //     mods = <MOD_LSFT>;
+        // };
         
         // CTRL + A (Select All) Mod morph behavior in navigation layer (if LCTRL is pressed --> A, else --> LCTRL)
         a_nav: mod_morph_ctrl_a {
@@ -137,7 +145,7 @@
            
            &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &mo_tog L_NAV L_NAV   &kp BSPC   &kp ENTER   &kp SPACE   &mo_tog L_SYM L_SYM   &kp MINUS   &td_lsw   &kp RCTRL
            >;
-           sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+           sensor-bindings = <&encoder_volume>;
         };
         
         /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
@@ -190,7 +198,7 @@
             >;
             
             display-name = "MISC";
-            sensor-bindings = <&scroll_encoder_rgb>;
+            sensor-bindings = <&encoder_volume>;
         };
     };
 };
