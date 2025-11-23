@@ -69,13 +69,29 @@
             tap-ms = <100>;
         };
         
+        // Knob encoder rgb brightness change
+        scroll_encoder_rgb_brightness: scroll_encoder_rgb_brightness {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+            tap-ms = <10>;
+        };
+
         // Knob encoder rgb hue change
-        scroll_encoder_rgb: scroll_encoder_rgb {
+        scroll_encoder_rgb_hue: scroll_encoder_rgb_hue {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
             tap-ms = <10>;
         };
+        
+        // Mod morph behavior for rbg brightness/hue change with LSHIFT
+        scroll_encoder_rgb: scroll_encoder_rgb {
+            compatible = "zmk,behavior-sensor-rotate";
+            binding-cells = <0>;
+            bindings = <&scroll_encoder_rgb_brightness>, <&scroll_encoder_rgb_hue>;
+            mods = <MOD_LSFT>;
+        }
         
         // CTRL + A (Select All) Mod morph behavior in navigation layer (if LCTRL is pressed --> A, else --> LCTRL)
         a_nav: mod_morph_ctrl_a {
@@ -84,6 +100,27 @@
             bindings = <&kp A>, <&kp LCTRL>;
             mods = <MOD_LCTL>;
         };
+
+        // Hold-tap layer behavior
+
+        lt_nav: layer_tap_nav {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo L_NAV>, <&to L_NAV>;
+            display-name = "Layer-Tap";
+        };
+
+        lt_sym: layer_tap_sym {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo L_SYM>, <&to L_SYM>;
+            display-name = "Layer-Tap";
+        };
+
     };
     
     keymap {
@@ -107,7 +144,7 @@
            &td_lsh      &kp A       &kp S       &kp D        &kp F        &kp G       &kp LEFT_ARROW     &kp H        &kp J        &kp K        &kp L        &kp SEMI     &td_rsh
            &kp LCTRL    &kp Z       &kp X       &kp C        &kp V        &kp B       &kp RIGHT_ARROW    &kp N        &kp M        &kp COMMA    &kp DOT      &kp SLASH    &kp ENTER
            
-           &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &mo L_NAV   &kp BSPC   &kp ENTER   &kp SPACE   &mo L_SYM   &kp MINUS   &td_lsw   &kp RCTRL
+           &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lt_nav   &kp BSPC   &kp ENTER   &kp SPACE   &lt_sym   &kp MINUS   &td_lsw   &kp RCTRL
            >;
            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
@@ -131,7 +168,7 @@
            &trans      &a_nav           &kp LSHIFT      &kp LALT         &kp LGUI         &mkp MB5           &msc SCRL_LEFT     &kp PG_DN          &kp LEFT         &kp DOWN      &kp RIGHT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
            &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &msc SCRL_RIGHT    &rgb_ug RGB_BRI    &rgb_ug RGB_BRD  &kp INSERT    &kp F11      &kp F12           &trans
 
-           &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_SYM   &kp MINUS   &td_lsw   &kp RCTRL
+           &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
            >;
            sensor-bindings = <&scroll_encoder>;
         };
@@ -158,7 +195,7 @@
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &kp C_MUTE    &kp LEFT_GUI    &kp LEFT_ALT    &kp EQUAL    &mo L_QWERTY    &kp BSPC    &kp ENTER          &kp SPACE    &mo L_SYM    &kp MINUS    &kp ENTER    &td_lsw
+            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
             >;
             
             display-name = "MISC";
