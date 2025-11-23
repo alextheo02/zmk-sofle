@@ -88,7 +88,7 @@
         // Mod morph behavior for rbg brightness/hue change with LSHIFT
         scroll_encoder_rgb: scroll_encoder_rgb {
             compatible = "zmk,behavior-sensor-rotate";
-            binding-cells = <0>;
+            #binding-cells = <0>;
             bindings = <&scroll_encoder_rgb_brightness>, <&scroll_encoder_rgb_hue>;
             mods = <MOD_LSFT>;
         }
