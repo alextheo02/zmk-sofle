@@ -57,11 +57,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - NAV
+  - '&lt_nav'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - SYMBOL
+  - '&lt_sym'
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
@@ -93,7 +93,7 @@ layers:
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: A, s: '$$mdi:apple-keyboard-control$$'}
+  - '&a_nav'
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -122,11 +122,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: QWERTY, h: toggle, type: held}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: SYMBOL, h: toggle}
+  - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
@@ -191,7 +191,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: QWERTY, h: toggle, type: held}
+  - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
@@ -248,15 +248,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-off$$
+  - RGB TOG
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - QWERTY
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - SYMBOL
+  - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&td_lsw'
+  - $$mdi:apple-keyboard-control$$
