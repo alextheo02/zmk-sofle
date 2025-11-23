@@ -96,13 +96,13 @@
             tap-ms = <10>;
         };
         
-        // // Mod morph behavior for rbg brightness/hue change with LSHIFT
-        // scroll_encoder_rgb: scroll_encoder_rgb {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&encoder_rgb_brightness>, <&encoder_rgb_hue>;
-        //     mods = <MOD_LSFT>;
-        // };
+        // Mod morph behavior for rbg brightness/hue change with LSHIFT
+        scroll_encoder_rgb: scroll_encoder_rgb {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&encoder_rgb_brightness>, <&encoder_rgb_hue>;
+            mods = <MOD_LSFT>;
+        };
         
         // CTRL + A (Select All) Mod morph behavior in navigation layer (if LCTRL is pressed --> A, else --> LCTRL)
         a_nav: mod_morph_ctrl_a {
