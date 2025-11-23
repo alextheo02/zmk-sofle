@@ -74,9 +74,8 @@
         // Knob encoder volume control
         encoder_volume: encoder_volume {
             compatible = "zmk,behavior-sensor-rotate";
-            #binding-cells = <0>;
             #sensor-binding-cells = <0>;
-            bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             tap-ms = <10>;
         };
         
