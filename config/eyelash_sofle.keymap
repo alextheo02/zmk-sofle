@@ -5,6 +5,7 @@
 #define L_NAV 1
 #define L_SYM 2
 #define L_MISC 3
+#define L_MISC2 4
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 #include <input/processors.dtsi>
@@ -96,14 +97,6 @@
             tap-ms = <10>;
         };
         
-        // Mod morph behavior for rbg brightness/hue change with LSHIFT
-        scroll_encoder_rgb: scroll_encoder_rgb {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&encoder_rgb_brightness>, <&encoder_rgb_hue>;
-            mods = <MOD_LSFT>;
-        };
-        
         // CTRL + A (Select All) Mod morph behavior in navigation layer (if LCTRL is pressed --> A, else --> LCTRL)
         a_nav: mod_morph_ctrl_a {
             compatible = "zmk,behavior-mod-morph";
@@ -163,21 +156,21 @@
         NAV {
            display-name = "NAV";
            bindings = <
-           &kp ESC     &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &msc SCRL_UP       &kp F6             &kp F7           &kp F8        &kp F9       &kp F10           &trans
+           &trans     &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &msc SCRL_UP       &kp F6             &kp F7           &kp F8        &kp F9       &kp F10           &trans
            &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &msc SCRL_DOWN     &kp PG_UP          &kp HOME         &kp UP        &kp END     &kp MINUS         &kp EQUAL
            &trans      &a_nav           &kp LSHIFT      &kp LALT         &kp LGUI         &mkp MB5           &msc SCRL_LEFT     &kp PG_DN          &kp LEFT         &kp DOWN      &kp RIGHT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
            &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &msc SCRL_RIGHT    &rgb_ug RGB_BRI    &rgb_ug RGB_BRD  &kp INSERT    &kp F11      &kp F12           &trans
 
            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
            >;
-           sensor-bindings = <&encoder_rgb_hue>;
+           sensor-bindings = <&encoder_volume>;
         };
         
         /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
         
         SYMBOL {
             bindings = <
-            &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
+            &trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
             &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
             &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
             &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
@@ -186,20 +179,33 @@
             >;
             
             display-name = "SYMBOL";
-            sensor-bindings = <&encoder_rgb_brightness>;
+            sensor-bindings = <&encoder_volume>;
         };
         
         MISC {
             bindings = <
-            &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &mo L_MISC2  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
             >;
             
             display-name = "MISC";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&encoder_rgb_hue>;
+        };
+
+        MISC2 {
+            bindings = <
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans
+            >;
+            
+            display-name = "MISC";
+            sensor-bindings = <&encoder_rgb_brightness>;
         };
     };
 };
