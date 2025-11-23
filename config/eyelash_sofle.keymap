@@ -85,15 +85,16 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+            tap-ms = <10>;
         };
 
-        // // Knob encoder rgb hue change
-        // encoder_rgb_hue: scroll_encoder_rgb_hue {
-        //     compatible = "zmk,behavior-sensor-rotate";
-        //     #sensor-binding-cells = <0>;
-        //     bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
-        //     tap-ms = <10>;
-        // };
+        // Knob encoder rgb hue change
+        encoder_rgb_hue: scroll_encoder_rgb_hue {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
+            tap-ms = <10>;
+        };
         
         // // Mod morph behavior for rbg brightness/hue change with LSHIFT
         // scroll_encoder_rgb: scroll_encoder_rgb {
@@ -169,7 +170,7 @@
 
            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
            >;
-           sensor-bindings = <&scroll_encoder>;
+           sensor-bindings = <&encoder_rgb_hue>;
         };
         
         /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
