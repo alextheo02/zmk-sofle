@@ -42,7 +42,7 @@
         td_lsw: tap_dance_layer_switch {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&to 0>, <&to 1>, <&to 2>, <&to 3>;
         };
         
@@ -50,7 +50,7 @@
         td_lsh: tap_dance_lshift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
         };
         
@@ -58,7 +58,7 @@
         td_rsh: tap_dance_rshift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             bindings = <&kp RSHIFT>, <&kp CAPSLOCK>;
         };
         
@@ -130,7 +130,8 @@
            &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &msc SCRL_DOWN     &kp PG_UP          &kp HOME         &kp UP        &kp END     &kp MINUS         &kp EQUAL
            &trans      &a_nav           &kp LSHIFT      &kp LALT         &kp LGUI         &mkp MB5           &msc SCRL_LEFT     &kp PG_DN          &kp LEFT         &kp DOWN      &kp RIGHT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
            &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &msc SCRL_RIGHT    &rgb_ug RGB_BRI    &rgb_ug RGB_BRD  &kp INSERT    &kp F11      &kp F12           &trans
-           &kp C_MUTE  &kp LEFT_GUI     &kp LEFT_ALT    &kp EQUAL        &mo L_QWERTY     &kp BSPC           &kp ENTER          &kp SPACE          &mo L_SYM        &kp MINUS     &kp ENTER    &td_lsw
+
+           &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_SYM   &kp MINUS   &td_lsw   &kp RCTRL
            >;
            sensor-bindings = <&scroll_encoder>;
         };
@@ -143,7 +144,8 @@
             &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
             &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
             &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-            &kp C_MUTE    &kp LEFT_GUI    &kp LEFT_ALT    &kp EQUAL    &mo L_NAV    &kp BSPC    &kp ENTER          &kp SPACE      &mo L_QWERTY    &kp MINUS    &kp ENTER    &td_lsw
+
+            &kp C_MUTE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
             >;
             
             display-name = "SYMBOL";
