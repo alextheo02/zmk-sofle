@@ -57,11 +57,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - '&lt_nav'
+  - {t: NAV, h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - '&lt_sym'
+  - {t: SYMBOL, h: SYMBOL}
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
@@ -122,7 +122,7 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: QWERTY, h: toggle}
+  - {t: QWERTY, h: toggle, type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
@@ -191,7 +191,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: QWERTY, h: toggle}
+  - {t: QWERTY, h: toggle, type: held}
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
