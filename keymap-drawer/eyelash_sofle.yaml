@@ -122,14 +122,14 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: QWERTY, type: held}
+  - {t: QWERTY, h: toggle, type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - SYMBOL
+  - {t: SYMBOL, h: toggle}
   - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&td_lsw'
+  - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - '~'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -187,14 +187,14 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: NAV, type: held alternate}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: QWERTY, type: held}
+  - {t: QWERTY, h: toggle, type: held}
   - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&td_lsw'
+  - $$mdi:apple-keyboard-control$$
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
