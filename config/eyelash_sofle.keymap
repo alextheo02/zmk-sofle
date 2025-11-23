@@ -64,6 +64,7 @@
             bindings = <&kp RSHIFT>, <&kp CAPSLOCK>;
         };
         
+        // Knob encoder scroll behavior
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -71,11 +72,11 @@
             tap-ms = <100>;
         };
 
-        // Knob encoder volume control
+        // Knob encoder volume control behavior
         encoder_volume: encoder_volume {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOLUME_UP &kp C_VOLUME_DN>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
             tap-ms = <10>;
         };
         
