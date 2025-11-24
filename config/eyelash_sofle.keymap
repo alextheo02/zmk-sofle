@@ -213,10 +213,10 @@
 
         MISC2 {
             bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
 
             &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans
             >;
