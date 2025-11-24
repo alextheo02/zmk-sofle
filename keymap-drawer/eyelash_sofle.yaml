@@ -91,7 +91,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '=', s: +}
+  - Ctl+F
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:apple-keyboard-control$$', s: A}
   - $$mdi:apple-keyboard-shift$$
@@ -104,12 +104,12 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&LC(Z)'
-  - '&LC(X)'
-  - '&LC(C)'
-  - '&LC(V)'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-right$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
