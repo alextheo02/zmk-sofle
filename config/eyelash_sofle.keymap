@@ -97,11 +97,11 @@
             tap-ms = <10>;
         };
         
-        // CTRL + A (Select All) Mod morph behavior in navigation layer (if LCTRL is pressed --> A, else --> LCTRL)
-        a_nav: mod_morph_ctrl_a {
+        // CTRL + A (Select All) Mod morph behavior (if LCTRL is pressed --> A, else --> LCTRL)
+        a_mod: mod_morph_ctrl_a {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp LCTRL>;
+            bindings = <&kp LCTRL>, <&kp A>;
             mods = <MOD_LCTL>;
         };
 
@@ -152,13 +152,12 @@
         
         | KNOB  | SYS | ALT |  =  | M1  | BACK |JOY_PR| SPC | M2  | - | M3 | RCTRL |
         */
-       
         NAV {
            display-name = "NAV";
            bindings = <
            &trans     &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &msc SCRL_UP       &kp F6             &kp F7           &kp F8        &kp F9       &kp F10           &trans
            &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &msc SCRL_DOWN     &kp PG_UP          &kp HOME         &kp UP        &kp END     &kp MINUS         &kp EQUAL
-           &trans      &a_nav           &kp LSHIFT      &kp LALT         &kp LGUI         &mkp MB5           &msc SCRL_LEFT     &kp PG_DN          &kp LEFT         &kp DOWN      &kp RIGHT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+           &trans      &a_mod           &kp LSHIFT      &kp LALT         &kp LGUI         &mkp MB5           &msc SCRL_LEFT     &kp PG_DN          &kp LEFT         &kp DOWN      &kp RIGHT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
            &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &msc SCRL_RIGHT    &rgb_ug RGB_BRI    &rgb_ug RGB_BRD  &kp INSERT    &kp F11      &kp F12           &trans
 
            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
@@ -167,12 +166,19 @@
         };
         
         /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+                /* Physical Key Layout Reference
+        |  ESC  |  1  |  2  |  3  |  4  |  5  | JOY ↑ |  6  |  7  |  8  |  9  |  0  |  DEL  |
+        |  TAB  |  Q  |  W  |  E  |  R  |  T  | JOY ↓ |  Y  |  U  |  I  |  O  |  P  |   \   |
+        | LSHFT |  A  |  S  |  D  |  F  |  G  | JOY ← |  H  |  J  |  K  |  L  |  ;  | RSHFT |
+        | LCTRL |  Z  |  X  |  C  |  V  |  B  | JOY → |  N  |  M  |  ,  |  .  |  /  | ENTER |
         
+        | KNOB  | SYS | ALT |  =  | M1  | BACK |JOY_PR| SPC | M2  | - | M3 | RCTRL |
+        */
         SYMBOL {
             bindings = <
             &trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
             &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-            &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
+            &trans     &a_mod  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
             &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 
             &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
@@ -182,12 +188,22 @@
             sensor-bindings = <&encoder_volume>;
         };
         
+        /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+        /* Physical Key Layout Reference
+        |  ESC  |  1  |  2  |  3  |  4  |  5  | JOY ↑ |  6  |  7  |  8  |  9  |  0  |  DEL  |
+        |  TAB  |  Q  |  W  |  E  |  R  |  T  | JOY ↓ |  Y  |  U  |  I  |  O  |  P  |   \   |
+        | LSHFT |  A  |  S  |  D  |  F  |  G  | JOY ← |  H  |  J  |  K  |  L  |  ;  | RSHFT |
+        | LCTRL |  Z  |  X  |  C  |  V  |  B  | JOY → |  N  |  M  |  ,  |  .  |  /  | ENTER |
+        
+        | KNOB  | SYS | ALT |  =  | M1  | BACK |JOY_PR| SPC | M2  | - | M3 | RCTRL |
+        */
         MISC {
             bindings = <
-            &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &mo L_MISC2  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none             &none             &none   &none
+            &none         &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &none
+            &mo L_MISC2   &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &none
+            &none         &none          &none          &none          &none          &none          &none   &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
+
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
             >;
             
@@ -201,6 +217,7 @@
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+
             &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans
             >;
             
