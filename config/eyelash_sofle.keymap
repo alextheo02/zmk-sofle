@@ -155,10 +155,10 @@
         NAV {
            display-name = "NAV";
            bindings = <
-           &trans     &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &msc SCRL_UP       &kp F6             &kp F7           &kp F8        &kp F9       &kp F10           &trans
-           &trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &msc SCRL_DOWN     &kp PG_UP          &kp HOME         &kp UP        &kp END     &kp MINUS         &kp EQUAL
-           &trans      &a_mod           &kp LSHIFT      &kp LALT         &kp LGUI         &mkp MB5           &msc SCRL_LEFT     &kp PG_DN          &kp LEFT         &kp DOWN      &kp RIGHT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-           &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &msc SCRL_RIGHT    &rgb_ug RGB_BRI    &rgb_ug RGB_BRD  &kp INSERT    &kp F11      &kp F12           &trans
+           &trans   &kp F1   &kp F2       &kp F3     &kp F4     &kp F5     &msc SCRL_UP       &kp F6      &kp F7     &kp F8     &kp F9      &kp F10    &trans
+           &trans   &none    &none        &none      &none      &none      &msc SCRL_DOWN     &kp PG_UP   &kp HOME   &kp UP     &kp END     &none      &kp EQUAL
+           &trans   &a_mod   &kp LSHIFT   &kp LALT   &kp LGUI   &mkp MB5   &msc SCRL_LEFT     &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &none      &none
+           &trans   &LC(Z)   &LC(X)       &LC(C)     &LC(V)     &none      &msc SCRL_RIGHT    &none       &none      &none      &none       &none      &trans
 
            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
            >;
@@ -199,10 +199,10 @@
         */
         MISC {
             bindings = <
-            &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none             &none             &none   &none
-            &none         &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &none
-            &mo L_MISC2   &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &mo L_MISC2
-            &none         &none          &none          &none          &none          &none          &none   &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
+            &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &b1 BL_INC   &none   &none   &none             &none             &none   &none
+            &none         &none          &none          &none          &none          &none          &b1 BL_INC   &none   &none   &none             &none             &none   &none
+            &mo L_MISC2   &none          &none          &none          &none          &none          &C_PREV      &none   &none   &none             &none             &none   &mo L_MISC2
+            &none         &none          &none          &none          &none          &none          &C_NEXT      &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
             >;
@@ -213,15 +213,15 @@
 
         MISC2 {
             bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &b2 BL_INC   &trans   &trans   &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &b2 BL_INC   &trans   &trans   &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &C_PREV      &trans   &trans   &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &C_NEXT      &trans   &trans   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
 
             &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans
             >;
             
-            display-name = "MISC";
+            display-name = "MISC2";
             sensor-bindings = <&encoder_rgb_brightness>;
         };
     };
