@@ -199,8 +199,8 @@
         */
         MISC {
             bindings = <
-            &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &b1 BL_INC      &none   &none   &none             &none             &none   &none
-            &none         &none          &none          &none          &none          &none          &b1 BL_INC      &none   &none   &none             &none             &none   &none
+            &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bl BL_INC      &none   &none   &none             &none             &none   &none
+            &none         &none          &none          &none          &none          &none          &bl BL_DEC      &none   &none   &none             &none             &none   &none
             &mo L_MISC2   &none          &none          &none          &none          &none          &kp C_PREV      &none   &none   &none             &none             &none   &mo L_MISC2
             &none         &none          &none          &none          &none          &none          &kp C_NEXT      &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
@@ -213,8 +213,8 @@
 
         MISC2 {
             bindings = <
-            &trans  &trans  &trans  &trans  &trans  &trans    &b2 BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
-            &trans  &trans  &trans  &trans  &trans  &trans    &b2 BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &bl BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans    &bl BL_DEC      &trans   &trans   &trans           &trans           &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &kp C_PREV      &trans   &trans   &trans           &trans           &trans  &trans
             &trans  &trans  &trans  &trans  &trans  &trans    &kp C_NEXT      &trans   &trans   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
 
