@@ -201,7 +201,7 @@
             bindings = <
             &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none   &none   &none   &none             &none             &none   &none
             &none         &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &none
-            &mo L_MISC2   &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &none
+            &mo L_MISC2   &none          &none          &none          &none          &none          &none   &none   &none   &none             &none             &none   &mo L_MISC2
             &none         &none          &none          &none          &none          &none          &none   &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC   &kp ENTER   &kp SPACE   &to L_QWERTY   &kp MINUS   &td_lsw   &kp RCTRL
