@@ -122,11 +122,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: '&lswitch', type: held}
+  - {t: '&lsw_qwerty', type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - '&lswitch'
+  - '&lsw_qwerty'
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
@@ -187,11 +187,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - '&lswitch'
+  - '&lsw_qwerty'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: '&lswitch', type: held}
+  - {t: '&lsw_qwerty', type: held}
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
@@ -252,11 +252,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - '&lswitch'
+  - '&lsw_qwerty'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
-  - '&lswitch'
+  - '&lsw_qwerty'
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
