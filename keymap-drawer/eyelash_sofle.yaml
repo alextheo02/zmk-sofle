@@ -57,11 +57,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: '&lswitch 1', h: NAV}
+  - {t: NAV, h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: '&lswitch 2', h: SYMBOL}
+  - {t: SYMBOL, h: SYMBOL}
   - {t: '-', s: _}
   - '&td_lsw'
   - $$mdi:apple-keyboard-control$$
