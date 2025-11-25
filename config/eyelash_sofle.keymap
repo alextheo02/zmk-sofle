@@ -56,7 +56,7 @@
         // Tap-dance behavior to switch layers (1-tap --> layer0, 2-tap --> layer1 ...)
         td_lsw: tap_dance_layer_switch {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             tapping-term-ms = <200>;
             bindings = <&to 0>, <&to 1>, <&to 2>, <&to 3>;
         };
@@ -233,7 +233,7 @@
             &mo L_MISC2   &none          &none          &none          &none          &none          &kp C_PREV      &none   &none   &none             &none             &none   &mo L_MISC2
             &none         &none          &none          &none          &none          &none          &kp C_NEXT      &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
-            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw_hold_to RGUI   &kp RCTRL
+            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw_hold_to RGUI 0   &kp RCTRL
             >;
             
             display-name = "MISC";
