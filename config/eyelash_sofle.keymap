@@ -52,13 +52,22 @@
     };
 
     behaviors {
+
+        // Hold-tap behavior to switch layer, or press button
+        layer_mt: layer_mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&to>;
+        };
         
         // Tap-dance behavior to switch layers (1-tap --> layer0, 2-tap --> layer1 ...)
         td_lsw: tap_dance_layer_switch {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 0>, <&to 1>, <&to 2>, <&to 3>;
+            bindings = <&layer_mt RGUI L_QWERTY>, <&to L_NAV>, <&to L_SYM>, <&to L_MISC>;
         };
         
         // Tap-dance behavior for LShift, (1-tap --> normal shift, 2-tap --> CapsLock)
@@ -133,15 +142,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to>;
         };
-
-        // Hold-tap R_GUI and M3 (tapdance layer switch) behavior
-        td_lsw_hold_to: td_lsw_hold_to {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&td_lsw>;
-        };
         
     };
     
@@ -166,7 +166,7 @@
            &td_lsh      &kp A       &kp S       &kp D        &kp F        &kp G       &kp LEFT_ARROW     &kp H        &kp J        &kp K        &kp L        &kp SEMI     &td_rsh
            &kp LCTRL    &kp Z       &kp X       &kp C        &kp V        &kp B       &kp RIGHT_ARROW    &kp N        &kp M        &kp COMMA    &kp DOT      &kp SLASH    &kp ENTER
            
-           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   MO_TOG(L_NAV)   &kp BSPC   &kp ENTER   &kp SPACE   MO_TOG(L_SYM)   &kp MINUS   &td_lsw_hold_to RGUI 0   &kp RCTRL
+           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   MO_TOG(L_NAV)   &kp BSPC   &kp ENTER   &kp SPACE   MO_TOG(L_SYM)   &kp MINUS   &td_lsw   &kp RCTRL
            >;
            sensor-bindings = <&encoder_volume>;
         };
@@ -189,7 +189,7 @@
            &trans   &a_mod      &kp LSHIFT   &kp LALT    &kp LGUI    &none      &msc SCRL_LEFT     &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &trans
            &trans   &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)   &none      &msc SCRL_RIGHT    &none       &none      &none      &none       &none       &trans
 
-           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw_hold_to RGUI 0  &kp RCTRL
+           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw  &kp RCTRL
            >;
            sensor-bindings = <&encoder_volume>;
         };
@@ -210,7 +210,7 @@
             &trans     &a_mod  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
             &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 
-            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw_hold_to RGUI 0  &kp RCTRL
+            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw  &kp RCTRL
             >;
             
             display-name = "SYMBOL";
@@ -233,7 +233,7 @@
             &mo L_MISC2   &none          &none          &none          &none          &none          &kp C_PREV      &none   &none   &none             &none             &none   &mo L_MISC2
             &none         &none          &none          &none          &none          &none          &kp C_NEXT      &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
-            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw_hold_to RGUI 0   &kp RCTRL
+            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &td_lsw   &kp RCTRL
             >;
             
             display-name = "MISC";
