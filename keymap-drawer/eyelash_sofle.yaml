@@ -63,7 +63,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: SYMBOL, h: SYMBOL}
   - {t: '-', s: _}
-  - {t: A, h: RGUI}
+  - '&td_lsw_hold_to RGUI'
   - $$mdi:apple-keyboard-control$$
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -128,7 +128,7 @@ layers:
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '-', s: _}
-  - {t: '0', h: RGUI}
+  - '&td_lsw_hold_to RGUI'
   - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -193,7 +193,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '&lsw_qwerty', type: held}
   - {t: '-', s: _}
-  - {t: '0', h: RGUI}
+  - '&td_lsw_hold_to RGUI'
   - $$mdi:apple-keyboard-control$$
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -258,7 +258,7 @@ layers:
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '-', s: _}
-  - {t: '0', h: RGUI}
+  - '&td_lsw_hold_to RGUI'
   - $$mdi:apple-keyboard-control$$
   MISC2:
   - {t: '$$mdi:transfer$$', type: trans}
