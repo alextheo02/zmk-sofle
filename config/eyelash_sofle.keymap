@@ -42,11 +42,11 @@
 
     macros {
 
-        // Macro to switch to qwerty layer after find (ctrl+f) - Layer switch happens on release
-        find: find_macro {
+        // Macro to switch to qwerty layer and find (ctrl+f)
+        find_qwerty: find_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(F)>, <&macro_wait_time 25>, <&to L_QWERTY>;
+            bindings = <&to L_QWERTY>, <&macro_wait_time 25>, <&kp LC(F)>;
         };
 
     };
@@ -176,7 +176,7 @@
            display-name = "NAV";
            bindings = <
            &trans   &kp F1      &kp F2       &kp F3      &kp F4      &kp F5     &msc SCRL_UP       &kp F6      &kp F7     &kp F8     &kp F9      &kp F10     &trans
-           &trans   &none       &none        &none       &none       &none      &msc SCRL_DOWN     &kp PG_UP   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find
+           &trans   &none       &none        &none       &none       &none      &msc SCRL_DOWN     &kp PG_UP   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find_qwerty
            &trans   &a_mod      &kp LSHIFT   &kp LALT    &kp LGUI    &none      &msc SCRL_LEFT     &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &trans
            &trans   &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)   &none      &msc SCRL_RIGHT    &none       &none      &none      &none       &none       &trans
 
