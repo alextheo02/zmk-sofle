@@ -40,6 +40,20 @@
 
 / {
 
+    macros {
+
+        // Macro to switch to qwerty layer after find (ctrl+f)
+        find: find_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                LC(F)           // Ctrl + F
+                &to L_QWERTY    // Switch to QWERTY layer
+            >;
+        };
+        
+    };
+
     behaviors {
         
         // Tap-dance behavior to switch layers (1-tap --> layer0, 2-tap --> layer1 ...)
@@ -123,15 +137,6 @@
             bindings = <&mo>, <&to>;
         };
         
-        // Macro to switch to qwerty layer after find (ctrl+f)
-        find: find_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                LC(F)           // Ctrl + F
-                &to L_QWERTY    // Switch to QWERTY layer
-            >;
-        };
     };
     
     keymap {
