@@ -46,7 +46,7 @@
         find: find_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <LC(F)>, <&macro_wait_time 25>, <&to L_QWERTY>;
+            bindings = <&kp LC(F)>, <&macro_wait_time 25>, <&to L_QWERTY>;
         };
 
     };
