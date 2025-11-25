@@ -107,7 +107,7 @@
         };
 
         // Double-tap layer behavior, reset to QWERTY layer
-        lswitch : layer_switch {
+        lswitch: layer_switch {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <1>;
             tapping-term-ms = <200>;
