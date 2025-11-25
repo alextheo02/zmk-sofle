@@ -258,7 +258,7 @@ layers:
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '-', s: _}
-  - '&td_lsw_hold_to RGUI'
+  - {t: '&td_lsw', h: RGUI}
   - $$mdi:apple-keyboard-control$$
   MISC2:
   - {t: '$$mdi:transfer$$', type: trans}
