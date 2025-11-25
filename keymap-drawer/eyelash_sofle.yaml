@@ -91,7 +91,7 @@ layers:
   - $$mdi:arrow-up-bold$$
   - END
   - PG UP
-  - '&find'
+  - '&find_qwerty'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:apple-keyboard-control$$', s: A}
   - $$mdi:apple-keyboard-shift$$
