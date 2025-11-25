@@ -123,6 +123,14 @@
             bindings = <&mo>, <&to>;
         };
 
+        // Macro to switch to qwerty layer after find (ctrl+f)
+        find: find_macro {
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                LC(F)           // Ctrl + F
+                &to L_QWERTY    // Switch to QWERTY layer
+            >
+        };
     };
     
     keymap {
@@ -165,7 +173,7 @@
            display-name = "NAV";
            bindings = <
            &trans   &kp F1      &kp F2       &kp F3      &kp F4      &kp F5     &msc SCRL_UP       &kp F6      &kp F7     &kp F8     &kp F9      &kp F10     &trans
-           &trans   &none       &none        &none       &none       &none      &msc SCRL_DOWN     &kp PG_UP   &kp HOME   &kp UP     &kp END     &kp PG_UP   &kp LC(F)
+           &trans   &none       &none        &none       &none       &none      &msc SCRL_DOWN     &kp PG_UP   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find
            &trans   &a_mod      &kp LSHIFT   &kp LALT    &kp LGUI    &none      &msc SCRL_LEFT     &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &trans
            &trans   &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)   &none      &msc SCRL_RIGHT    &none       &none      &none      &none       &none       &trans
 
