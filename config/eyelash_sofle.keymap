@@ -73,7 +73,7 @@
         td_lsw: tap_dance_layer_switch {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&to L_QWERTY>, <&to L_NAV>, <&to L_SYM>, <&to L_MISC>;
         };
 
@@ -81,7 +81,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <800>;
+            tapping-term-ms = <200>;
             bindings = <&m_rgui &td_lsw>;
         };
         
