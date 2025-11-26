@@ -127,10 +127,10 @@
         */
         MISC {
             bindings = <
-            &none         BT(0)   BT(1)   BT(2)   BT(3)   BT(4)     &bl BL_INC     &none   &none   &none             &none             &none   &none
-            &none         &none   &none   &none   &none   &none     &bl BL_DEC     &none   &none   &none             &none             &none   &none
-            &mo L_MISC2   &none   &none   &none   &none   &none     &kp C_PREV     &none   &none   &none             &none             &none   &mo L_MISC2
-            &none         &none   &none   &none   &none   &none     &kp C_NEXT     &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
+            &none         BT(0) 0 0   BT(1) 0 0   BT(2) 0 0   BT(3) 0 0   BT(4) 0 0     &bl BL_INC     &none   &none   &none             &none             &none   &none
+            &none         &none       &none       &none       &none       &none         &bl BL_DEC     &none   &none   &none             &none             &none   &none
+            &mo L_MISC2   &none       &none       &none       &none       &none         &kp C_PREV     &none   &none   &none             &none             &none   &mo L_MISC2
+            &none         &none       &none       &none       &none       &none         &kp C_NEXT     &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0  &kp RCTRL
             >;
