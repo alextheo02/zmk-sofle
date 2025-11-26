@@ -602,11 +602,10 @@ rect.held, rect.combo.held {
 <g transform="translate(314, 283) rotate(30.0)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#NAV">
-<text x="0" y="-4" class="key tap layer-activator">NAV</text>
-</a><a href="#NAV">
-<text x="0" y="24" class="key hold layer-activator">NAV</text>
-</a></g>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 86%">&amp;mo_tog</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">1</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">1</tspan>
+</text>
+</g>
 <g transform="translate(389, 294) rotate(30.0)" class="key backspace keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key backspace side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key backspace"/>
@@ -625,11 +624,10 @@ rect.held, rect.combo.held {
 <g transform="translate(610, 283) rotate(-30.0)" class="key keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<a href="#SYMBOL">
-<text x="0" y="-4" class="key tap layer-activator">SYMBOL</text>
-</a><a href="#SYMBOL">
-<text x="0" y="24" class="key hold layer-activator">SYMBOL</text>
-</a></g>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 86%">&amp;mo_tog</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">2</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">2</tspan>
+</text>
+</g>
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
@@ -639,8 +637,9 @@ rect.held, rect.combo.held {
 <g transform="translate(728, 252)" class="key keypos-62">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;td_lsw</tspan></text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 86%">&amp;m_rgui</tspan></text>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;gui_tapd…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan>
+</text>
 </g>
 <g transform="translate(784, 259)" class="key keypos-63">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -794,8 +793,7 @@ rect.held, rect.combo.held {
 <g transform="translate(84, 168)" class="key keypos-27">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-control"/>
-<text x="0" y="-24" class="key shifted">A</text>
+<text x="0" y="-4" class="key tap">&amp;a_mod</text>
 </g>
 <g transform="translate(140, 147)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -944,10 +942,10 @@ rect.held, rect.combo.held {
 <text x="0" y="-4" class="key tap">=</text>
 <text x="0" y="-24" class="key shifted">+</text>
 </g>
-<g transform="translate(314, 283) rotate(30.0)" class="key held keypos-56">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held"/>
-<text x="0" y="-4" class="key held tap"><tspan style="font-size: 60%">&amp;lsw_qwer…</tspan></text>
+<g transform="translate(314, 283) rotate(30.0)" class="key keypos-56">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;lsw_qwer…</tspan></text>
 </g>
 <g transform="translate(389, 294) rotate(30.0)" class="key backspace keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key backspace side"/>
@@ -978,8 +976,9 @@ rect.held, rect.combo.held {
 <g transform="translate(728, 252)" class="key keypos-62">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;td_lsw</tspan></text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 86%">&amp;m_rgui</tspan></text>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;gui_tapd…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan>
+</text>
 </g>
 <g transform="translate(784, 259)" class="key keypos-63">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1138,8 +1137,7 @@ rect.held, rect.combo.held {
 <g transform="translate(84, 168)" class="key keypos-27">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:apple-keyboard-control"/>
-<text x="0" y="-24" class="key shifted">A</text>
+<text x="0" y="-4" class="key tap">&amp;a_mod</text>
 </g>
 <g transform="translate(140, 147)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1308,10 +1306,10 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-space"/>
 </g>
-<g transform="translate(610, 283) rotate(-30.0)" class="key held keypos-60">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held"/>
-<text x="0" y="-4" class="key held tap"><tspan style="font-size: 60%">&amp;lsw_qwer…</tspan></text>
+<g transform="translate(610, 283) rotate(-30.0)" class="key keypos-60">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;lsw_qwer…</tspan></text>
 </g>
 <g transform="translate(672, 259)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1322,8 +1320,9 @@ rect.held, rect.combo.held {
 <g transform="translate(728, 252)" class="key keypos-62">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;td_lsw</tspan></text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 86%">&amp;m_rgui</tspan></text>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;gui_tapd…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan>
+</text>
 </g>
 <g transform="translate(784, 259)" class="key keypos-63">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1343,32 +1342,37 @@ rect.held, rect.combo.held {
 <g transform="translate(84, 56)" class="key keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;bt_cl_sel</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_sel_…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_cl_p…</tspan>
+</text>
 </g>
 <g transform="translate(140, 35)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;bt_cl_sel</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_sel_…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_cl_p…</tspan>
+</text>
 </g>
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;bt_cl_sel</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_sel_…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_cl_p…</tspan>
+</text>
 </g>
 <g transform="translate(252, 35)" class="key keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;bt_cl_sel</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_sel_…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_cl_p…</tspan>
+</text>
 </g>
 <g transform="translate(308, 35)" class="key keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:bluetooth-off"/>
-<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:bluetooth-connect"/>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;bt_cl_sel</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_sel_…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">m_bt_cl_p…</tspan>
+</text>
 </g>
 <g transform="translate(462, 35)" class="key keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -1667,8 +1671,9 @@ rect.held, rect.combo.held {
 <g transform="translate(728, 252)" class="key keypos-62">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap"><tspan style="font-size: 86%">&amp;td_lsw</tspan></text>
-<text x="0" y="24" class="key hold"><tspan style="font-size: 86%">&amp;m_rgui</tspan></text>
+<text x="0" y="-4" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;gui_tapd…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">0</tspan>
+</text>
 </g>
 <g transform="translate(784, 259)" class="key keypos-63">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
