@@ -80,8 +80,8 @@
         gui_tapdance_mt: gui_tapdance_mt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <800>;
             bindings = <&m_rgui &td_lsw>;
         };
         
