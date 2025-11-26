@@ -6,7 +6,8 @@
 #define L_SYM 2
 #define L_MISC 3
 #define L_MISC2 4
-#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+#define MO_TOG(layer) &mo_tog layer layer // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+#define BT_CL_SEL(profile) &bt_cl_sel &bt BT_CLR profile &bt BT_SEL profile // Macro to clear/select bluetooth profiles
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -59,15 +60,6 @@
     };
 
     behaviors {
-
-        // Hold-tap behavior to switch layer, or press button
-        layer_mt: layer_mt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&to>;
-        };
         
         // Tap-dance behavior to switch layers (1-tap --> layer0, 2-tap --> layer1 ...)
         td_lsw: tap_dance_layer_switch {
@@ -105,7 +97,7 @@
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;l
             tap-ms = <100>;
         };
 
@@ -156,6 +148,14 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to>;
+        };
+
+        // Bluetooth clear-select profile hold behavior
+        bt_cl_sel: bt_clear_select_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
         };
         
     };
@@ -243,10 +243,10 @@
         */
         MISC {
             bindings = <
-            &none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bl BL_INC      &none   &none   &none             &none             &none   &none
-            &none         &none          &none          &none          &none          &none          &bl BL_DEC      &none   &none   &none             &none             &none   &none
-            &mo L_MISC2   &none          &none          &none          &none          &none          &kp C_PREV      &none   &none   &none             &none             &none   &mo L_MISC2
-            &none         &none          &none          &none          &none          &none          &kp C_NEXT      &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
+            &none         &BT_CL_SEL(0)   &BT_CL_SEL(1)   &BT_CL_SEL(2)   &BT_CL_SEL(3)   &BT_CL_SEL(4)   &bl BL_INC   &none   &none   &none             &none             &none   &none
+            &none         &none           &none           &none           &none           &none           &bl BL_DEC   &none   &none   &none             &none             &none   &none
+            &mo L_MISC2   &none           &none           &none           &none           &none           &kp C_PREV   &none   &none   &none             &none             &none   &mo L_MISC2
+            &none         &none           &none           &none           &none           &none           &kp C_NEXT   &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0  &kp RCTRL
             >;
