@@ -197,11 +197,11 @@ layers:
   - $$mdi:apple-keyboard-control$$
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&bt_cl_sel m_bt_sel_profile m_bt_cl_profile'
-  - '&bt_cl_sel m_bt_sel_profile m_bt_cl_profile'
-  - '&bt_cl_sel m_bt_sel_profile m_bt_cl_profile'
-  - '&bt_cl_sel m_bt_sel_profile m_bt_cl_profile'
-  - '&bt_cl_sel m_bt_sel_profile m_bt_cl_profile'
+  - '&bt_cl_sel_profile'
+  - '&bt_cl_sel_profile'
+  - '&bt_cl_sel_profile'
+  - '&bt_cl_sel_profile'
+  - '&bt_cl_sel_profile'
   - '&bl BL_INC'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
