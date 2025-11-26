@@ -7,7 +7,7 @@
 #define L_MISC 3
 #define L_MISC2 4
 #define MO_TOG(layer) &mo_tog layer layer // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define BT_CL_SEL(profile) &bt_cl_sel &bt BT_CLR profile &bt BT_SEL profile // Macro to clear/select bluetooth profiles
+#define BT_CL_SEL(profile) &bt_cl_sel profile profile // Macro to clear/select bluetooth profiles
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -156,6 +156,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <3000>;
+            bindings = <&bt BT_CLR>, <&bt BT_SEL>;
         };
         
     };
