@@ -72,10 +72,10 @@
 
         gui_tapdance_mt: gui_tapdance_mt {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp RGUI>, <&td_lsw>;
+            bindings = <&kp RGUI &td_lsw>;
         };
         
         // Tap-dance behavior for LShift, (1-tap --> normal shift, 2-tap --> CapsLock)
@@ -174,7 +174,7 @@
            &td_lsh      &kp A       &kp S       &kp D        &kp F        &kp G       &kp LEFT_ARROW     &kp H        &kp J        &kp K        &kp L        &kp SEMI     &td_rsh
            &kp LCTRL    &kp Z       &kp X       &kp C        &kp V        &kp B       &kp RIGHT_ARROW    &kp N        &kp M        &kp COMMA    &kp DOT      &kp SLASH    &kp ENTER
            
-           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   MO_TOG(L_NAV)   &kp BSPC   &kp ENTER   &kp SPACE   MO_TOG(L_SYM)   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
+           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   MO_TOG(L_NAV)   &kp BSPC   &kp ENTER   &kp SPACE   MO_TOG(L_SYM)   &kp MINUS   &gui_tapdance_mt   &kp RCTRL
            >;
            sensor-bindings = <&encoder_volume>;
         };
@@ -197,7 +197,7 @@
            &trans   &a_mod      &kp LSHIFT   &kp LALT    &kp LGUI    &none      &msc SCRL_LEFT     &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &trans
            &trans   &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)   &none      &msc SCRL_RIGHT    &none       &none      &none      &none       &none       &trans
 
-           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0  &kp RCTRL
+           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt  &kp RCTRL
            >;
            sensor-bindings = <&encoder_volume>;
         };
@@ -218,7 +218,7 @@
             &trans     &a_mod  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
             &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 
-            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0 &kp RCTRL
+            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &kp ENTER   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt &kp RCTRL
             >;
             
             display-name = "SYMBOL";
@@ -241,7 +241,7 @@
             &mo L_MISC2   &none          &none          &none          &none          &none          &kp C_PREV      &none   &none   &none             &none             &none   &mo L_MISC2
             &none         &none          &none          &none          &none          &none          &kp C_NEXT      &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
-            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
+            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC   &none   &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt   &kp RCTRL
             >;
             
             display-name = "MISC";
