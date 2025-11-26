@@ -71,14 +71,12 @@
         };
 
         gui_tapdance_mt: gui_tapdance_mt {
-            compatible = "zmk,behavio-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp RGUI>, <&td_lsw>;
         };
-
-        // NOT WORKING AS INTENDED
         
         // Tap-dance behavior for LShift, (1-tap --> normal shift, 2-tap --> CapsLock)
         td_lsh: tap_dance_lshift {
