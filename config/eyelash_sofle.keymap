@@ -19,8 +19,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#include "macros.dtsi"
-#include "behaviors.dtsi"
+// #include "macros.dtsi"
+// #include "behaviors.dtsi"
 
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
@@ -43,7 +43,208 @@
 
 / {
 
-    
+    macros {
+
+        // Macro to switch to qwerty layer and find (ctrl+f)
+        find_qwerty: find_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to L_QWERTY>, <&macro_wait_time 25>, <&kp LC(F)>;
+        };
+
+        // RGUI macro for workaround
+        m_rgui: macro_rgui {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RGUI>;
+        };
+
+        // Bluetooth profile select macros
+        m_bt_sel_0: macro_bt_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>;
+        };
+        m_bt_sel_1: macro_bt_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>;
+        };
+        m_bt_sel_2: macro_bt_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>;
+        };
+        m_bt_sel_3: macro_bt_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>;
+        };
+        m_bt_sel_4: macro_bt_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>;
+        };
+
+        // Bluetooth clear profile macros
+        m_bt_cl_0: macro_bt_cl_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR 0>;
+        };
+        m_bt_cl_1: macro_bt_cl_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR 1>;
+        };
+        m_bt_cl_2: macro_bt_cl_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR 2>;
+        };
+        m_bt_cl_3: macro_bt_cl_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR 3>;
+        };
+        m_bt_cl_4: macro_bt_cl_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR 4>;
+        };
+
+    };
+
+    behaviors {
+        
+        // Tap-dance behavior to switch layers (1-tap --> layer0, 2-tap --> layer1 ...)
+        td_lsw: tap_dance_layer_switch {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&to L_QWERTY>, <&to L_NAV>, <&to L_SYM>, <&to L_MISC>;
+        };
+
+        gui_tapdance_mt: gui_tapdance_mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&m_rgui &td_lsw>;
+        };
+        
+        // Tap-dance behavior for LShift, (1-tap --> normal shift, 2-tap --> CapsLock)
+        td_lsh: tap_dance_lshift {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&kp CAPSLOCK>;
+        };
+        
+        // Tap-dance behavior for RShift, (1-tap --> normal shift, 2-tap --> CapsLock)
+        td_rsh: tap_dance_rshift {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RSHIFT>, <&kp CAPSLOCK>;
+        };
+        
+        // Knob encoder scroll behavior
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <100>;
+        };
+
+        // Knob encoder volume control behavior
+        encoder_volume: encoder_volume {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_VOLUME_DOWN>;
+            tap-ms = <10>;
+        };
+        
+        // Knob encoder rgb brightness change
+        encoder_rgb_brightness: scroll_encoder_rgb_brightness {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+            tap-ms = <10>;
+        };
+
+        // Knob encoder rgb hue change
+        encoder_rgb_hue: scroll_encoder_rgb_hue {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
+            tap-ms = <10>;
+        };
+        
+        // CTRL + A (Select All) Mod morph behavior (if LCTRL is pressed --> A, else --> LCTRL)
+        a_mod: mod_morph_ctrl_a {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp A>;
+            mods = <MOD_LCTL>;
+        };
+
+        // Double-tap layer behavior, reset to QWERTY layer
+        lsw_qwerty: layer_switch_safe_qwerty {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to L_QWERTY>, <&to L_QWERTY>;
+        };
+
+        // Hold-tap layer behavior
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&to>;
+        };
+
+        // Bluetooth clear-select profile hold behaviors
+        bt_cl_sel_0: bt_clear_select_behavior_0 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&m_bt_cl_0 &m_bt_sel_0>;
+        };
+        bt_cl_sel_1: bt_clear_select_behavior_1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&m_bt_cl_1 &m_bt_sel_1>;
+        };
+        bt_cl_sel_2: bt_clear_select_behavior_2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&m_bt_cl_2 &m_bt_sel_2>;
+        };
+        bt_cl_sel_3: bt_clear_select_behavior_3 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&m_bt_cl_3 &m_bt_sel_3>;
+        };
+        bt_cl_sel_4: bt_clear_select_behavior_4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <3000>;
+            bindings = <&m_bt_cl_4 &m_bt_sel_4>;
+        };
+        
+    };
+
     keymap {
         compatible = "zmk,keymap";
         
