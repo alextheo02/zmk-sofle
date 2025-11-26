@@ -49,6 +49,13 @@
             bindings = <&to L_QWERTY>, <&macro_wait_time 25>, <&kp LC(F)>;
         };
 
+        // RGUI macro for workaround
+        m_rgui: macro_rgui {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RGUI>;
+        };
+
     };
 
     behaviors {
@@ -75,7 +82,7 @@
             #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp RGUI &td_lsw>;
+            bindings = <&m_rgui &td_lsw>;
         };
         
         // Tap-dance behavior for LShift, (1-tap --> normal shift, 2-tap --> CapsLock)
