@@ -56,13 +56,13 @@ layers:
   - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '=', s: +}
+  - {t: '-', s: _}
   - {t: NAV, h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - {t: SYMBOL, h: SYMBOL}
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   NAV:
@@ -121,13 +121,13 @@ layers:
   - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '=', s: +}
+  - {t: '-', s: _}
   - {t: '&lsw_qwerty', type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   SYMBOL:
@@ -186,17 +186,17 @@ layers:
   - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '=', s: +}
+  - {t: '-', s: _}
   - '&lsw_qwerty'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - {t: '&lsw_qwerty', type: held}
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   MISC:
-  - '&boot_reset'
+  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$'}
   - '&m_bt_sel_0'
   - '&m_bt_sel_1'
   - '&m_bt_sel_2'
@@ -251,13 +251,13 @@ layers:
   - RGB TOG
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '=', s: +}
+  - {t: '-', s: _}
   - '&lsw_qwerty'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   MISC2:
