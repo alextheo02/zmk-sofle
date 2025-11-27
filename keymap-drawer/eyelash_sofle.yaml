@@ -197,11 +197,11 @@ layers:
   - $$mdi:apple-keyboard-control$$
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {h: BT DISC, s: '$$mdi:bluetooth-connect$$'}
-  - {h: BT DISC, s: '$$mdi:bluetooth-connect$$'}
-  - {h: BT DISC, s: '$$mdi:bluetooth-connect$$'}
-  - {h: BT DISC, s: '$$mdi:bluetooth-connect$$'}
-  - {h: BT DISC, s: '$$mdi:bluetooth-connect$$'}
+  - '&bt_disc_sel BT_DISC 0 BT_SEL 0'
+  - '&bt_disc_sel BT_DISC 1 BT_SEL 1'
+  - '&bt_disc_sel BT_DISC 2 BT_SEL 2'
+  - '&bt_disc_sel BT_DISC 3 BT_SEL 3'
+  - '&bt_disc_sel BT_DISC 4 BT_SEL 4'
   - '&bl BL_INC'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
