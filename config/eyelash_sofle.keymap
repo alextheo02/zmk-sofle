@@ -126,7 +126,7 @@
         */
         MISC {
             bindings = <
-            &boot_reset 0 0   &m_bt_sel_0   &m_bt_sel_1   &m_bt_sel_2   &m_bt_sel_3   &m_bt_sel_4    &bl BL_INC     &none   &none   &none             &none             &none   &none
+            &boot_reset 0 0   &none   &none   &none   &none   &none    &bl BL_INC     &none   &none   &none             &none             &none   &none
             &none             &none         &none         &none         &none         &none          &bl BL_DEC     &none   &none   &none             &none             &none   &none
             &mo L_MISC2       &none         &none         &none         &none         &none          &kp C_PREV     &none   &none   &none             &none             &none   &mo L_MISC2
             &none             &none         &none         &none         &none         &none          &kp C_NEXT     &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
