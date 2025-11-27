@@ -57,13 +57,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '-', s: _}
-  - {t: NAV, h: NAV}
+  - '&mo_tog 1 1'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: SYMBOL, h: SYMBOL}
+  - '&mo_tog 2 2'
   - {t: '=', s: +}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - '&gui_tapdance_mt 0 0'
   - $$mdi:apple-keyboard-control$$
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -93,7 +93,7 @@ layers:
   - PG UP
   - '&find_qwerty'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:apple-keyboard-control$$', s: A}
+  - '&a_mod'
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -122,13 +122,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '-', s: _}
-  - {t: '&lsw_qwerty', type: held}
+  - '&lsw_qwerty'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '=', s: +}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - '&gui_tapdance_mt 0 0'
   - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -158,7 +158,7 @@ layers:
   - _
   - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:apple-keyboard-control$$', s: A}
+  - '&a_mod'
   - OUT BLE
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -191,9 +191,9 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - {t: '&lsw_qwerty', type: held}
+  - '&lsw_qwerty'
   - {t: '=', s: +}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - '&gui_tapdance_mt 0 0'
   - $$mdi:apple-keyboard-control$$
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -258,7 +258,7 @@ layers:
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '=', s: +}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - '&gui_tapdance_mt 0 0'
   - $$mdi:apple-keyboard-control$$
   MISC2:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
