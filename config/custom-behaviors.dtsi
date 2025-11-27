@@ -96,7 +96,7 @@
             #binding-cells = <1>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&bt BT_DISC>, <&bt BT_SEL>;
+            bindings = <&bt &bt>;
             display-name = "BT DISC/SEL";
         };
         
