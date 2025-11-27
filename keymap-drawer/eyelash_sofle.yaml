@@ -57,13 +57,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - '&mo_tog 1 1'
+  - {t: NAV, h: NAV}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - '&mo_tog 2 2'
+  - {t: SYMBOL, h: SYMBOL}
   - {t: '-', s: _}
-  - '&gui_tapdance_mt 0 0'
+  - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -93,7 +93,7 @@ layers:
   - PG UP
   - '&find_qwerty'
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&a_mod'
+  - {t: '$$mdi:apple-keyboard-control$$', s: A}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
@@ -122,13 +122,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - '&lsw_qwerty'
+  - {t: '&lsw_qwerty', type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '-', s: _}
-  - '&gui_tapdance_mt 0 0'
+  - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -158,7 +158,7 @@ layers:
   - _
   - +
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&a_mod'
+  - {t: '$$mdi:apple-keyboard-control$$', s: A}
   - OUT BLE
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -191,9 +191,9 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - '&lsw_qwerty'
+  - {t: '&lsw_qwerty', type: held}
   - {t: '-', s: _}
-  - '&gui_tapdance_mt 0 0'
+  - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   MISC:
   - '&boot_reset'
@@ -258,7 +258,7 @@ layers:
   - $$mdi:keyboard-space$$
   - '&lsw_qwerty'
   - {t: '-', s: _}
-  - '&gui_tapdance_mt 0 0'
+  - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   MISC2:
   - {t: '$$mdi:transfer$$', type: trans}
