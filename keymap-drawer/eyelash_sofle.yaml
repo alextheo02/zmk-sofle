@@ -196,7 +196,7 @@ layers:
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   MISC:
-  - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -261,7 +261,7 @@ layers:
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
   MISC2:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
