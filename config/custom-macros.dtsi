@@ -42,28 +42,28 @@
             bindings = <&bt BT_SEL 4>;
         };
 
-        // Bluetooth clear profile macros
-        m_bt_cl_0: macro_bt_cl_0 {
+        // Bluetooth disconnect profile macros
+        m_bt_disc_0: m_bt_disc_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_CLR 0>;
         };
-        m_bt_cl_1: macro_bt_cl_1 {
+        m_bt_disc_1: macro_bt_disc_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_CLR 1>;
         };
-        m_bt_cl_2: macro_bt_cl_2 {
+        m_bt_disc_2: macro_bt_disc_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_CLR 2>;
         };
-        m_bt_cl_3: macro_bt_cl_3 {
+        m_bt_disc_3: macro_bt_disc_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_CLR 3>;
         };
-        m_bt_cl_4: macro_bt_cl_4 {
+        m_bt_disc_4: macro_bt_disc_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_CLR 4>;
