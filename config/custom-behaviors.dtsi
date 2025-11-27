@@ -127,13 +127,13 @@
             bindings = <&m_bt_cl_4 &m_bt_sel_4>;
         };
         
-        // Bootloader long press - reset tap
-        boot_reset: boot_reset_behavior { 
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <5000>;
-            bindings = <&bootloader &sys_reset>;
-        };
+        // // Bootloader long press - reset tap
+        // boot_reset: boot_reset_behavior { 
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-preferred";
+        //     tapping-term-ms = <5000>;
+        //     bindings = <&bootloader &sys_reset>;
+        // };
     };
 };
