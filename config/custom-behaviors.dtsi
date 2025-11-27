@@ -93,10 +93,11 @@
         // Bluetooth disconnect-select profile hold behaviors (hold -> disconnect, tap -> select)
         bt_disc_sel: bt_disc_sel {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&bt>, <&bt>;
+            bindings = <&bt BT_DISC>, <&bt BT_SEL>;
+            display-name = "BT DISC/SEL";
         };
         
         
