@@ -198,10 +198,10 @@ layers:
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
-  - {t: '&m_bt_sel_1', h: '&m_bt_disc_1'}
-  - {t: '&m_bt_sel_2', h: '&m_bt_disc_2'}
-  - {t: '&m_bt_sel_3', h: '&m_bt_disc_3'}
-  - {t: '&m_bt_sel_4', h: '&m_bt_disc_4'}
+  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
+  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
+  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
+  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
   - '&bl BL_INC'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
