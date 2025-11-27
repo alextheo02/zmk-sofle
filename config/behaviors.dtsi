@@ -132,8 +132,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <3000>;
-            bindings = <&bootloader &reset>;
+            tapping-term-ms = <5000>;
+            bindings = <&bootloader &sys_reset>;
         };
     };
 };
