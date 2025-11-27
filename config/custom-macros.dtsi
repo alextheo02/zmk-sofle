@@ -46,7 +46,7 @@
         m_bt_disc_0: m_bt_disc_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_CLR 0>;
+            bindings = <&bt BT_DISC 0>;
         };
         // m_bt_disc_1: macro_bt_disc_1 {
         //     compatible = "zmk,behavior-macro";
