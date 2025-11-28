@@ -197,11 +197,11 @@ layers:
   - $$mdi:apple-keyboard-control$$
   MISC:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
-  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
-  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
-  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
-  - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
+  - {t: '&m_bt_sel_4', h: '&m_bt_disc_4'}
+  - '&bt_disc_sel_1 0 0'
+  - '&bt_disc_sel_2 0 0'
+  - '&bt_disc_sel_3 0 0'
+  - '&bt_disc_sel_4 0 0'
   - '&bl BL_INC'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
