@@ -91,12 +91,44 @@
         };
 
         // Bluetooth disconnect-select profile hold behaviors (hold -> disconnect, tap -> select)
-        bt_disc_sel: bt_disc_sel {
+        bt_disc_sel_0: bt_disc_sel_0 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&m_bt_disc_0 &m_bt_sel_0>;
+            display-name = "BT DISC/SEL";
+        };
+        bt_disc_sel_0: bt_disc_sel_1 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&m_bt_disc_1 &m_bt_sel_1>;
+            display-name = "BT DISC/SEL";
+        };
+        bt_disc_sel_0: bt_disc_sel_2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&m_bt_disc_2 &m_bt_sel_2>;
+            display-name = "BT DISC/SEL";
+        };
+        bt_disc_sel_0: bt_disc_sel_3 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&m_bt_disc_3 &m_bt_sel_3>;
+            display-name = "BT DISC/SEL";
+        };
+        bt_disc_sel_0: bt_disc_sel_4 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&m_bt_disc_4 &m_bt_sel_4>;
             display-name = "BT DISC/SEL";
         };
         
