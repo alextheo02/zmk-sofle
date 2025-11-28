@@ -141,10 +141,10 @@
         MISC2 {
             // &boot_reset 0 0   &trans  &trans  &trans  &trans  &trans    &bl BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
             bindings = <
-            &none   &trans  &trans  &trans  &trans  &trans    &bl BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
-            &trans            &trans  &trans  &trans  &trans  &trans    &bl BL_DEC      &trans   &trans   &trans           &trans           &trans  &trans
-            &trans            &trans  &trans  &trans  &trans  &trans    &kp C_PREV      &trans   &trans   &trans           &trans           &trans  &trans
-            &trans            &trans  &trans  &trans  &trans  &trans    &kp C_NEXT      &trans   &trans   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
+            &boot_reset   &trans   &trans   &trans   &trans   &trans    &bl BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
+            &trans        &trans   &trans   &trans   &trans   &trans    &bl BL_DEC      &trans   &trans   &trans           &trans           &trans  &trans
+            &trans        &trans   &trans   &trans   &trans   &trans    &kp C_PREV      &trans   &trans   &trans           &trans           &trans  &trans
+            &trans        &trans   &trans   &trans   &trans   &trans    &kp C_NEXT      &trans   &trans   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
 
             &trans   &trans   &trans   &trans   &trans   &trans  &trans   &trans   &trans   &trans   &trans   &trans
             >;
