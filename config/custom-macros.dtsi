@@ -42,7 +42,7 @@
             bindings = <&bt BT_SEL 4>;
         };
 
-        // // Bluetooth disconnect profile macros
+        // Bluetooth disconnect profile macros
         m_bt_disc_0: m_bt_disc_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
