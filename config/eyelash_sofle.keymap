@@ -83,7 +83,7 @@
            display-name = "NAV";
            bindings = <
            &esc_qwerty   &kp F1      &kp F2       &kp F3      &kp F4      &kp F5     &msc SCRL_UP        &kp F6   &kp F7     &kp F8     &kp F9      &kp F10     &trans
-           &kp TAB       &none       &none        &none       &none       &none      &msc SCRL_DOWN      &LC(Y)   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find_qwerty
+           &kp TAB       &none       &none        &none       &none       &none      &msc SCRL_DOWN      &kp LC(Y)   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find_qwerty
            &td_lsh       &kp LGUI  &kp LCTRL   &kp LALT    &kp LSHIFT    &none       &msc SCRL_LEFT      &none    &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &trans
            &kp LCTRL     &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)   &none      &msc SCRL_RIGHT     &none    &none      &none      &none       &none       &trans
 
