@@ -69,5 +69,12 @@
             bindings = <&bt BT_DISC 4>;
         };
 
+        // Macro to return to QWERTY with esc
+        esc_qwerty: esc_qwerty_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to L_QWERTY>, <&macro_wait_time 25>, <&kp ESC>;
+        };
+
     };
 };
