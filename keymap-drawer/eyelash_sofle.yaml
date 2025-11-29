@@ -132,17 +132,17 @@ layers:
   - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - '~'
-  - '&EXCL'
-  - '&AT'
-  - '&HASH'
-  - '&DLLR'
-  - '&PRCNT'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - ^
-  - '&AMPS'
-  - '&ASTRK'
-  - '&LPAR'
-  - '&RPAR'
+  - '&'
+  - '*'
+  - (
+  - )
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
