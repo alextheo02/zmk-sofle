@@ -103,10 +103,10 @@
         */
         SYMBOL {
             bindings = <
-            &kp TILDE   &EXCL       &AT     &HASH   &DLLR   &PRCNT       &none     &kp CARET   &AMPS      &ASTRK     &LPAR      &RPAR       &kp DEL
-            &trans      &kp GRAVE   &none   &none   &none   &kp none     &none     &kp LBRC    &kp RBRC   &kp LBKT   &kp RBKT   &kp PLUS    &BSLH
-            &trans      &none       &none   &none   &none   &kp none     &none     &kp COLON   &kp SEMI   &kp SQT    &kp DQT    &kp MINUS   &td_rsh
-            &trans      &none       &none   &none   &none   &kp none     &none     &kp COMMA   &kp DOT    &kp LT     &kp GT     &kp SLASH   &kp ENTER
+            &kp TILDE   &kp EXCL    &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none     &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR    &kp DEL
+            &trans      &kp GRAVE   &none    &none      &none      &kp none      &none     &kp LBRC    &kp RBRC   &kp LBKT    &kp RBKT   &kp PLUS    &BSLH
+            &trans      &none       &none    &none      &none      &kp none      &none     &kp COLON   &kp SEMI   &kp SQT     &kp DQT    &kp MINUS   &td_rsh
+            &trans      &none       &none    &none      &none      &kp none      &none     &kp COMMA   &kp DOT    &kp LT      &kp GT     &kp SLASH   &kp ENTER
 
             &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp MINUS   &lsw_qwerty   &kp BSPC     &none    &kp SPACE   &lsw_qwerty   &kp EQUAL   &gui_tapdance_mt 0 0   &kp RCTRL
             >;
