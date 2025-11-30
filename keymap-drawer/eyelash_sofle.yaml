@@ -39,7 +39,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - '&rshift_ht'
+  - {t: DQT 0, h: RSHIFT 0}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - '&rctrl_ht'
+  - {t: ENTER 0, h: RCTRL 0}
   - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
@@ -104,7 +104,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - PG DN
-  - '&rshift_ht'
+  - {t: DQT 0, h: RSHIFT 0}
   - $$mdi:apple-keyboard-control$$
   - Ctl+Z
   - Ctl+X
@@ -117,7 +117,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&rctrl_ht'
+  - {t: ENTER 0, h: RCTRL 0}
   - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
@@ -169,7 +169,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ;, s: ':'}
-  - '&rshift_ht_dq'
+  - '&rshift_ht_dq 0 0'
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -182,7 +182,7 @@ layers:
   - <
   - '>'
   - '?'
-  - '&rctrl_ht'
+  - {t: ENTER 0, h: RCTRL 0}
   - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
