@@ -65,12 +65,31 @@
             tap-ms = <10>;
         };
         
-        // CTRL + A (Select All) Mod morph behavior (if LCTRL is pressed --> A, else --> LCTRL)
-        a_mod: mod_morph_ctrl_a {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp A>;
-            mods = <MOD_LCTL>;
+        // Right shift single quote hld-tap behavior
+        rshift_ht: rshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&kp RSHIFT>, <&kp SQT>;
+        };
+
+        // Right shift double quote hold-tap behavior
+        rshift_ht: rshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&kp RSHIFT>, <&kp DQT>;
+        };
+
+        // Right control enter hold-tap behavior
+        rctrl_ht: rctrl_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&kp RCTRL>, <&kp ENTER>;
         };
 
         // Double-tap layer behavior, reset to QWERTY layer

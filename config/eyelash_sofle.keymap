@@ -60,8 +60,8 @@
            bindings = <
            &kp ESC       &kp N1   &kp N2   &kp N3   &kp N4   &kp N5     &kp UP_ARROW        &kp N6   &kp N7   &kp N8      &kp N9    &kp N0      &kp DEL
            &kp TAB       &kp Q    &kp W    &kp E    &kp R    &kp T      &kp DOWN_ARROW      &kp Y    &kp U    &kp I       &kp O     &kp P       &kp BSLH
-           &td_lsh       &kp A    &kp S    &kp D    &kp F    &kp G      &kp LEFT_ARROW      &kp H    &kp J    &kp K       &kp L     &kp SQT     &kp SQT
-           &kp LCTRL     &kp Z    &kp X    &kp C    &kp V    &kp B      &kp RIGHT_ARROW     &kp N    &kp M    &kp COMMA   &kp DOT   &kp SLASH   &kp ENTER
+           &td_lsh       &kp A    &kp S    &kp D    &kp F    &kp G      &kp LEFT_ARROW      &kp H    &kp J    &kp K       &kp L     &kp SEMI    &rshift_ht
+           &kp LCTRL     &kp Z    &kp X    &kp C    &kp V    &kp B      &kp RIGHT_ARROW     &kp N    &kp M    &kp COMMA   &kp DOT   &kp SLASH   &rctrl_ht
            
            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &mo L_NAV   &kp BSPC     &none     &kp SPACE   &mo L_SYM   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
            >;
@@ -80,10 +80,10 @@
         NAV {
            display-name = "NAV";
            bindings = <
-           &kp ESC       &kp F1      &kp F2       &kp F3      &kp F4       &kp F5     &msc SCRL_UP        &kp F6      &kp F7     &kp F8     &kp F9      &kp F10     &trans
+           &kp ESC       &kp F1      &kp F2       &kp F3      &kp F4       &kp F5     &msc SCRL_UP        &kp F6      &kp F7     &kp F8     &kp F9      &kp F10     &kp BSPC
            &kp TAB       &none       &none        &none       &kp LC(Y)    &none      &msc SCRL_DOWN      &kp LC(Y)   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find_qwerty
-           &td_lsh       &kp LGUI   &kp LCTRL   &kp LSHIFT    &kp LALT     &none      &msc SCRL_LEFT      &none       &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &trans
-           &kp LCTRL     &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)    &none      &msc SCRL_RIGHT     &none       &none      &none      &none       &none       &trans
+           &td_lsh       &kp LGUI   &kp LCTRL   &kp LSHIFT    &kp LALT     &none      &msc SCRL_LEFT      &none       &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &rshift_ht
+           &kp LCTRL     &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)    &none      &msc SCRL_RIGHT     &none       &none      &none      &none       &none       &rctrl_ht
 
            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC     &none     &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
            >;
@@ -101,12 +101,12 @@
         */
         SYMBOL {
             bindings = <
-            &kp GRAVE   &kp EXCL    &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none     &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR    &kp DEL
-            &trans      &kp TILDE   &none    &none      &none      &none         &none     &kp LPAR    &kp RPAR   &none    &none   &none    &kp BSLH
-            &trans      &none       &none    &none      &none      &none         &none     &kp LBKT    &kp RBKT   &none     &none    &kp SEMI   &kp SQT
-            &trans      &none       &none    &none      &none      &none         &none     &kp LBRC    &kp RBRC   &kp LT      &kp GT     &kp SLASH   &kp ENTER
+            &kp GRAVE     &kp EXCL    &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none     &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR    &kp DEL
+            &kp TAB     &kp TILDE   &none    &none      &none        &none         &none     &kp LPAR    &kp RPAR   &none       &none      &none       &kp PIPE
+            &td_lsh     &none       &none    &none      &none        &none         &none     &kp LBKT    &kp RBKT   &none       &none      &kp SEMI    &rshift_ht_dq
+            &kp LCTRL   &none       &none    &none      &none        &none         &none     &kp LBRC    &kp RBRC   &kp LT      &kp GT     &kp QMARK   &rctrl_ht
 
-            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC     &none    &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
+            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp PLUS   &lsw_qwerty   &kp BSPC     &none    &kp SPACE   &lsw_qwerty   &kp UNDER   &gui_tapdance_mt 0 0   &kp RCTRL
             >;
             
             display-name = "SYMBOL";
