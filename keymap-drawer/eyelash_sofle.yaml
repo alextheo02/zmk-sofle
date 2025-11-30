@@ -57,11 +57,11 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: NAV, h: NAV}
+  - NAV
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
-  - {t: SYMBOL, h: SYMBOL}
+  - SYMBOL
   - {t: '-', s: _}
   - {t: '&td_lsw', h: '&m_rgui'}
   - $$mdi:apple-keyboard-control$$
@@ -93,10 +93,10 @@ layers:
   - PG UP
   - '&find_qwerty'
   - '&td_lsh'
+  - LGUI
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
-  - LGUI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
