@@ -64,32 +64,14 @@
             bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
             tap-ms = <10>;
         };
-        
-        // Right shift single quote hld-tap behavior
-        rshift_ht: rshift_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&kp RSHIFT>, <&kp SQT>;
-        };
 
-        // Right shift double quote hold-tap behavior
-        rshift_ht_dq: rshift_hold_tap_dq {
+        // Hold-tap behavior
+        ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            bindings = <&kp RSHIFT>, <&kp DQT>;
-        };
-
-        // Right control enter hold-tap behavior
-        rctrl_ht: rctrl_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <150>;
-            bindings = <&kp RCTRL>, <&kp ENTER>;
+            bindings = <&kp>, <&kp>;
         };
 
         // Double-tap layer behavior, reset to QWERTY layer
