@@ -75,7 +75,7 @@
         };
 
         // Right shift double quote hold-tap behavior
-        rshift_ht: rshift_hold_tap {
+        rshift_ht_dq: rshift_hold_tap_dq {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
