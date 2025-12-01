@@ -63,7 +63,7 @@ layers:
   - $$mdi:keyboard-space$$
   - SYMBOL
   - {t: '-', s: _}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - {t: MISC, h: MISC}
   - $$mdi:apple-keyboard-control$$
   NAV:
   - $$mdi:keyboard-esc$$
@@ -80,8 +80,8 @@ layers:
   - F10
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F11
+  - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+Y
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -122,13 +122,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - {t: '&lsw_qwerty', type: held}
+  - {t: QWERTY, h: toggle, type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
-  - '&lsw_qwerty'
+  - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - {t: QWERTY, h: toggle}
   - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - {t: '`', s: '~'}
@@ -146,22 +146,22 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-tab$$
   - '~'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - (
   - )
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
+  - +
+  - {t: '=', s: +}
   - '|'
   - '&td_lsh'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '[', s: '{'}
@@ -187,13 +187,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - +
-  - '&lsw_qwerty'
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
-  - {t: '&lsw_qwerty', type: held}
+  - {t: QWERTY, h: toggle, type: held}
   - _
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - {t: QWERTY, h: toggle}
   - $$mdi:apple-keyboard-control$$
   MISC:
   - $$mdi:keyboard-esc$$
@@ -234,7 +234,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - MISC2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -252,13 +252,13 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
-  - '&lsw_qwerty'
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
-  - '&lsw_qwerty'
+  - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
-  - {t: '&td_lsw', h: '&m_rgui'}
+  - {t: QWERTY, h: toggle, type: held}
   - $$mdi:apple-keyboard-control$$
   MISC2:
   - '&boot_reset'
@@ -299,7 +299,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -323,5 +323,5 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
