@@ -63,7 +63,7 @@
            &td_lsh       &kp A    &kp S    &kp D    &kp F    &kp G      &kp LEFT_ARROW      &kp H    &kp J    &kp K       &kp L     &kp SEMI    &ht RSHIFT SQT
            &kp LCTRL     &kp Z    &kp X    &kp C    &kp V    &kp B      &kp RIGHT_ARROW     &kp N    &kp M    &kp COMMA   &kp DOT   &kp SLASH   &ht RCTRL ENTER
            
-           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &mo L_NAV   &kp BSPC     &none     &kp SPACE   &mo L_SYM   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
+           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &mo L_NAV   &kp BSPC     &none     &kp SPACE   &mo L_SYM   &kp MINUS   MO_TOG(L_MISC)   &kp RCTRL
            >;
            sensor-bindings = <&encoder_volume>;
         };
@@ -80,12 +80,12 @@
         NAV {
            display-name = "NAV";
            bindings = <
-           &kp ESC       &kp F1      &kp F2       &kp F3      &kp F4       &kp F5     &msc SCRL_UP        &kp F6      &kp F7     &kp F8     &kp F9      &kp F10     &kp BSPC
-           &kp TAB       &none       &none        &none       &kp LC(Y)    &none      &msc SCRL_DOWN      &kp LC(Y)   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find_qwerty
-           &td_lsh       &kp LGUI   &kp LCTRL   &kp LSHIFT    &kp LALT     &none      &msc SCRL_LEFT      &none       &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &ht RSHIFT SQT
-           &kp LCTRL     &kp LC(Z)   &kp LC(X)    &kp LC(C)   &kp LC(V)    &none      &msc SCRL_RIGHT     &none       &none      &none      &none       &none       &ht RCTRL ENTER
+           &kp ESC       &kp F1      &kp F2       &kp F3       &kp F4       &kp F5     &msc SCRL_UP        &kp F6      &kp F7     &kp F8     &kp F9      &kp F10     &kp BSPC
+           &kp TAB       &kp F11     &kp F12      &none        &kp LC(Y)    &none      &msc SCRL_DOWN      &kp LC(Y)   &kp HOME   &kp UP     &kp END     &kp PG_UP   &find_qwerty
+           &td_lsh       &kp LGUI    &kp LCTRL    &kp LSHIFT   &kp LALT     &none      &msc SCRL_LEFT      &none       &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_DN   &ht RSHIFT SQT
+           &kp LCTRL     &kp LC(Z)   &kp LC(X)    &kp LC(C)    &kp LC(V)    &none      &msc SCRL_RIGHT     &none       &none      &none      &none       &none       &ht RCTRL ENTER
 
-           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &lsw_qwerty   &kp BSPC     &none     &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
+           &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp EQUAL   &to L_QWERTY   &kp BSPC     &none     &kp SPACE   &to L_QWERTY   &kp MINUS   &to L_QWERTY   &kp RCTRL
            >;
            sensor-bindings = <&encoder_volume>;
         };
@@ -101,12 +101,12 @@
         */
         SYMBOL {
             bindings = <
-            &kp GRAVE     &kp EXCL    &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none     &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR    &kp DEL
-            &kp TAB     &kp TILDE   &none    &none      &none        &none         &none     &kp LPAR    &kp RPAR   &none       &none      &none       &kp PIPE
-            &td_lsh     &none       &none    &none      &none        &none         &none     &kp LBKT    &kp RBKT   &none       &none      &kp SEMI    &ht RSHIFT DQT
-            &kp LCTRL   &none       &none    &none      &none        &none         &none     &kp LBRC    &kp RBRC   &kp LT      &kp GT     &kp QMARK   &ht RCTRL ENTER
+            &kp GRAVE     &kp EXCL    &kp AT     &kp HASH    &kp DLLR     &kp PRCNT     &none     &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR    &kp DEL
+            &kp TAB     &kp TILDE     &kp HOME   &kp UP      &kp END      &none         &none     &kp LPAR    &kp RPAR   &kp MINUS   &kp PLUS   &kp EQUAL   &kp PIPE
+            &td_lsh     &none         &kp LEFT   &kp DOWN    &kp RIGHT    &none         &none     &kp LBKT    &kp RBKT   &none       &none      &kp SEMI    &ht RSHIFT DQT
+            &kp LCTRL   &none         &none      &none       &none        &none         &none     &kp LBRC    &kp RBRC   &kp LT      &kp GT     &kp QMARK   &ht RCTRL ENTER
 
-            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp PLUS   &lsw_qwerty   &kp BSPC     &none    &kp SPACE   &lsw_qwerty   &kp UNDER   &gui_tapdance_mt 0 0   &kp RCTRL
+            &kp C_PLAY_PAUSE   &kp LEFT_GUI   &kp LALT   &kp PLUS   &to L_QWERTY   &kp BSPC     &none    &kp SPACE   &to L_QWERTY   &kp UNDER   &to L_QWERTY   &kp RCTRL
             >;
             
             display-name = "SYMBOL";
@@ -126,10 +126,10 @@
             bindings = <
             &kp ESC       BT(0)   BT(1)   BT(2)        BT(3)   BT(4)     &bl BL_INC     &none   &none   &none       &none             &none   &none
             &none         &none   &none   &none        &none   &none     &bl BL_DEC     &none   &none   &none       &none             &none   &none
-            &mo L_MISC2   &none   &none   &none        &none   &none     &kp C_PREV     &none   &none   &none       &none             &none   &none
+            &mo L_MISC2   &none   &none   &none        &none   &none     &kp C_PREV     &none   &none   &none       &none             &none   &mo L_MISC2
             &none         &none   &none   &bt BT_CLR   &none   &none     &kp C_NEXT     &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
 
-            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT  &kp EQUAL   &lsw_qwerty   &kp BSPC     &none     &kp SPACE   &lsw_qwerty   &kp MINUS   &gui_tapdance_mt 0 0   &kp RCTRL
+            &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT  &kp EQUAL   &to L_QWERTY   &kp BSPC     &none     &kp SPACE   &to L_QWERTY   &kp MINUS   &to L_QWERTY   &kp RCTRL
             >;
             
             display-name = "MISC";
