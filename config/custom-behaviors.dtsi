@@ -70,6 +70,15 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
+            tapping-term-ms = <150f>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Hold-tap behavior (tap-preferred)
+        htt: hold_tap_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
