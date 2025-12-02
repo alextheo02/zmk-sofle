@@ -232,7 +232,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+L
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - MISC2
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -255,7 +255,7 @@ layers:
   - {t: QWERTY, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:keyboard-space$$
+  - Gui+$$mdi:keyboard-space$$
   - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
   - {t: QWERTY, h: toggle, type: held}
