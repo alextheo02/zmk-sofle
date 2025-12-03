@@ -63,8 +63,8 @@ layers:
   - $$mdi:keyboard-space$$
   - SYMBOL
   - {t: '-', s: _}
+  - $$mdi:apple-keyboard-option$$
   - {t: MISC, h: MISC}
-  - $$mdi:apple-keyboard-control$$
   NAV:
   - $$mdi:keyboard-esc$$
   - F1
@@ -128,8 +128,8 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
+  - $$mdi:apple-keyboard-option$$
   - {t: QWERTY, h: toggle}
-  - $$mdi:apple-keyboard-control$$
   SYMBOL:
   - {t: '`', s: '~'}
   - '!'
@@ -193,8 +193,8 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: QWERTY, h: toggle, type: held}
   - _
+  - $$mdi:apple-keyboard-option$$
   - {t: QWERTY, h: toggle}
-  - $$mdi:apple-keyboard-control$$
   MISC:
   - $$mdi:keyboard-esc$$
   - {t: '&m_bt_sel_0', h: '&m_bt_disc_0'}
@@ -258,8 +258,8 @@ layers:
   - Gui+$$mdi:keyboard-space$$
   - {t: QWERTY, h: toggle}
   - {t: '-', s: _}
+  - $$mdi:apple-keyboard-option$$
   - {t: QWERTY, h: toggle, type: held}
-  - $$mdi:apple-keyboard-control$$
   MISC2:
   - '&boot_reset'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -323,5 +323,5 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
