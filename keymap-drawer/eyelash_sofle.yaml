@@ -94,9 +94,9 @@ layers:
   - '&find_qwerty'
   - '&td_lsh'
   - LGUI
-  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:pan-left$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
