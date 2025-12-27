@@ -102,7 +102,7 @@
         SYMBOL {
             bindings = <
             &kp GRAVE      &kp EXCL      &kp AT     &kp HASH    &kp DLLR     &kp PRCNT     &none     &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR    &kp DEL
-            &kp TAB        &kp TILDE     &kp HOME   &kp UP      &kp END      &none         &none     &kp LPAR    &kp RPAR   &kp MINUS   &kp PLUS   &kp EQUAL   &kp PIPE
+            &kp TAB        &kp LS(Q)     &kp HOME   &kp UP      &kp END      &none         &none     &kp LPAR    &kp RPAR   &kp MINUS   &kp PLUS   &kp EQUAL   &kp PIPE
             &td_lsh        &none         &kp LEFT   &kp DOWN    &kp RIGHT    &none         &none     &kp LBKT    &kp RBKT   &kp GRAVE   &kp TILDE  &kp COLON   &ht RSHIFT DQT
             &kp LCTRL      &none         &none      &none       &none        &none         &none     &kp LBRC    &kp RBRC   &kp LT      &kp GT     &kp QMARK   &htt RCTRL LS(ENTER)
 
@@ -144,7 +144,7 @@
             &trans        &trans   &trans   &trans   &trans   &trans     &kp C_PREV      &trans   &trans   &trans           &trans           &trans  &trans
             &trans        &trans   &trans   &trans   &trans   &trans     &kp C_NEXT      &trans   &trans   &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans  &trans
 
-            &trans   &trans   &trans   &trans   &trans   &trans     &trans     &trans   &trans   &trans   &trans   &trans
+            &trans   &trans   &trans   &trans   &trans   &trans     &trans     &kp LG(SPACE)   &trans   &trans   &trans   &trans
             >;
             
             display-name = "MISC2";
