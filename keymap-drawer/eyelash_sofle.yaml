@@ -64,7 +64,7 @@ layers:
   - SYMBOL
   - {t: '-', s: _}
   - $$mdi:apple-keyboard-option$$
-  - {t: MISC, h: MISC}
+  - MISC
   NAV:
   - $$mdi:keyboard-esc$$
   - F1
