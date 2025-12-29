@@ -68,6 +68,20 @@
             #binding-cells = <0>;
             bindings = <&bt BT_DISC 4>;
         };
-
+        m_dc_screenshare: macro_dc_screenshare {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LS(KP_SLASH)))>;
+        };
+        m_dc_deafen: macro_dc_deafen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LS(KP_MINUS)))>;
+        };
+        m_dc_mute: macro_dc_mute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LS(KP_ASTERISK)))>;
+        };
     };
 };

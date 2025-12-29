@@ -124,10 +124,10 @@
         */
         MISC {
             bindings = <
-            &kp ESC       BT(0)   BT(1)   BT(2)        BT(3)   BT(4)     &bl BL_INC     &none   &none   &none             &none             &none   &none
-            &none         &none   &none   &none        &none   &none     &bl BL_DEC     &none   &none   &none             &none             &none   &none
-            &mo L_MISC2   &none   &none   &none        &none   &none     &kp C_PREV     &none   &none   &none             &kp LG(L)         &none   &mo L_MISC2
-            &none         &none   &none   &bt BT_CLR   &none   &none     &kp C_NEXT     &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF   &none   &none
+            &kp ESC       BT(0)   BT(1)   BT(2)        BT(3)   BT(4)     &bl BL_INC     &none   &none   &none             &m_dc_screenshare   &m_dc_mute  &m_dc_deafen
+            &none         &none   &none   &none        &none   &none     &bl BL_DEC     &none   &none   &none             &none               &none       &none
+            &mo L_MISC2   &none   &none   &none        &none   &none     &kp C_PREV     &none   &none   &none             &kp LG(L)           &none       &mo L_MISC2
+            &none         &none   &none   &bt BT_CLR   &none   &none     &kp C_NEXT     &none   &none   &rgb_ug RGB_EFR   &rgb_ug RGB_EFF     &none       &none
 
             &rgb_ug RGB_TOG   &kp LEFT_GUI   &kp LALT  &kp EQUAL   &to L_QWERTY   &kp BSPC     &none     &kp LG(SPACE)   &to L_QWERTY   &kp MINUS   &kp LALT   &to L_QWERTY
             >;
@@ -137,7 +137,6 @@
         };
 
         MISC2 {
-            // &boot_reset 0 0   &trans  &trans  &trans  &trans  &trans    &bl BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
             bindings = <
             &boot_reset   &trans   &trans   &trans   &trans   &trans     &bl BL_INC      &trans   &trans   &trans           &trans           &trans  &trans
             &trans        &trans   &trans   &trans   &trans   &trans     &bl BL_DEC      &trans   &trans   &trans           &trans           &trans  &trans
