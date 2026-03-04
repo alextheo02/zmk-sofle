@@ -118,7 +118,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: 'Sft+$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:volume-off$$
+  - PLAY PAUSE
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - {t: '=', s: +}
